@@ -43,6 +43,7 @@
             },
             zoom: 16,
             mapTypeId: google.maps.MapTypeId.MAP,
+            disableDoubleClickZoom: true
 
         });
 
