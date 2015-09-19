@@ -98,7 +98,7 @@ function autoComplete() {
         infowindow.close();
         var place = autocomplete.getPlace();
     }
-    
+
 }
 
 function loadFunctionIndex() {
