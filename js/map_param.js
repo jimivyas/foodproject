@@ -22,6 +22,11 @@ function setFare(fareIndex) {
     console.log("update!!!!" + fareList);
 }
 
+function setDifficulty(difficultyLevel) {
+    localStorage.setItem("difficulty", difficultyLevel);
+    console.log(difficultyLevel);
+}
+
 function loadFunctionIndex() {
     console.log("INITIAL PAGE LOAD");
     var fares = [false, false, false, false, false, false];
