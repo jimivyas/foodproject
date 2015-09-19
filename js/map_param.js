@@ -16,17 +16,16 @@ function setGuide(guideStatus) {
 }
 
 function setFare(fareIndex) {
-    var fareList = localStorage.getItem("fare");
-    console.log(fareIndex);
+    var fareList = JSON.parse(localStorage["fare"]);
     fareList[fareIndex] = !fareList[fareIndex];
-    localStorage.setItem("fare", fareList);
-    console.log("Updated: " + fareList);
+    localStorage["fare"] = JSON.stringify(fareList);
+    console.log("update!!!!" + fareList);
 }
 
 function loadFunctionIndex() {
+    console.log("INITIAL PAGE LOAD");
     var fares = [false, false, false, false, false, false];
-    localStorage.setItem("fare", fares);
-    console.log("Fares" + fares);
+    localStorage["fare"] = JSON.stringify(fares);
 }
 
 function loadFunctionMap() {
