@@ -1,27 +1,52 @@
 <html>
 	<head>
-        <title>food project !!!!</title>
+        <title>Dishcovery</title>
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="css/style.css" rel="stylesheet">
         <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-        <script src="/js/map_param.js"></script>
+        <!--<script><script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu5kUMitJagaDp9qHLpPCUqrC5gBNLFJA&libraries=places"></script>-->
+        <script src="/js/map_param.js"></script> 
 
 	</head>
+    
+	<body onload="loadFunctionIndex()">
+        <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <h1>Dishcover.</h1>
+            <form name="time">
+                <div class='input-group'><span class='input-group-addon' id='basic-addon1'>Start @ </span><input type='text' id='startPoint' class='form-control' placeholder='Enter address of starting point' aria-describedby='basic-addon1'></div>
+                <P></P>
+                <div class='input-group'><span class='input-group-addon' id='basic-addon1'>End @ </span><input type='text' id='endPoint' class='form-control' placeholder='Enter address of ending point' aria-describedby='basic-addon1'></div>
+                <P></P>
+                 <div class='input-group'><span class='input-group-addon' id='basic-addon1'>Point of Interest @ </span><input type='text' id='poi' class='form-control' placeholder='Enter address of POI' aria-describedby='basic-addon1'></div>
 
-	<body>
-        <h1>WELCOME! PICK YOUR FOOD ADVENTURE.</h1>
-        <form name="time">
-            <p>Where do you want to start?</p>
-            <div class='input-group'><span class='input-group-addon' id='basic-addon1'>start @ </span><input type='text' id='startPoint' class='form-control' placeholder='Enter address of starting point' aria-describedby='basic-addon1'></div>
-            <P></P>
-            <p>Where do you want to end?</p>
-            <div class='input-group'><span class='input-group-addon' id='basic-addon1'>end @ </span><input type='text' id='endPoint' class='form-control' placeholder='Enter address of ending point' aria-describedby='basic-addon1'></div>
-            <P></P>
-           <a type="submit" class="btn btn-default btn-block" onclick="submitPoints()" href="/map.html">Submit</a>
-        </form>
+                <div class='input-group'>Choose your spiritual guide.</div>
+                <button class='btn' onclick="setGuide('hipster')">Hipster</button>
+                <button class='btn' onclick="setGuide('tourist')">Tourist</button>
+
+                <div class='input-group'>Choose your fare.</div>
+                <button class='btn' onclick="setFare(0)">Breakfast</button>
+                <button class='btn' onclick="setFare(1)">Coffee</button>
+                <button class='btn' onclick="setFare(2)">Lunch</button>
+                <button class='btn' onclick="setFare(3)">High tea</button>
+                <button class='btn' onclick="setFare(4)">Dinner</button>
+                <button class='btn' onclick="setFare(5)">Dessert</button>
+
+                <div class='input-group'>Choose your difficulty level.</div>
+                <button class='btn'>Lazy af</button>
+                <button class='btn'>A walk sounds good</button>
+                <button class='btn'>I want to go EVERYWHERE</button>
+
+
+               <a type="submit" class="btn btn-default btn-block" onclick="submitPoints()" href="/map.html">Submit</a>
+            </form>
+        </div>
+        <div class="col-sm-3"></div>
+        </div>
+
 <!--        watch your slashes-->
         <script src="js/bootstrap.min.js">
         </script>
