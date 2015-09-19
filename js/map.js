@@ -86,7 +86,7 @@
         var number = document.createElement('div');
         number.style.zIndex = '10';
         number.style.width = '20px';
-        number.style.height = '16px';
+        number.style.height = '20px';
         number.style.borderRadius = '100px';
         number.style.background = '#1e88e5';
         number.style.position = 'absolute';
@@ -95,7 +95,7 @@
         number.style.color = 'white';
         number.style.textAlign = 'center';
         number.style.webkitFontSmoothing = 'antialiased';
-        number.style.paddingTop = '4px';
+        number.style.paddingTop = '3px';
         number.innerHTML = this.index_ + 1;
         parentdiv.appendChild(number);
 
