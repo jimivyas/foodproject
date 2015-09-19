@@ -15,11 +15,12 @@
         <h1>WELCOME! PICK YOUR FOOD ADVENTURE.</h1>
         <form name="time">
             <p>Where do you want to start?</p>
-            <input type="text" id="startPoint">
+            <div class='input-group'><span class='input-group-addon' id='basic-addon1'>start @ </span><input type='text' id='startPoint' class='form-control' placeholder='Enter address of starting point' aria-describedby='basic-addon1'></div>
+            <P></P>
             <p>Where do you want to end?</p>
-            <input type="text" id="endPoint">
+            <div class='input-group'><span class='input-group-addon' id='basic-addon1'>end @ </span><input type='text' id='endPoint' class='form-control' placeholder='Enter address of ending point' aria-describedby='basic-addon1'></div>
+            <P></P>
            <a type="submit" class="btn btn-default btn-block" onclick="submitPoints()" href="/map.html">Submit</a>
-            <a href="/map.html">fake submit</a>
         </form>
 <!--        watch your slashes-->
         <script src="js/bootstrap.min.js">
