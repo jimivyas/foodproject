@@ -97,7 +97,7 @@ function autoComplete() {
     autocomplete.addListener('place_changed', function() {
         infowindow.close();
         var place = autocomplete.getPlace();
-    }
+    })
 
 }
 
