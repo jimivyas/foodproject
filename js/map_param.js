@@ -1,11 +1,11 @@
 function submitPoints() {
     console.log("hi dweebteam");
-    var startPoint = document.getElementById('startPoint').value;
-    var endPoint = document.getElementById('endPoint').value;
     var poi = document.getElementById('poi').value;
-    localStorage.setItem("start", startPoint);
-    localStorage.setItem("end", endPoint);
     localStorage.setItem("poi", poi);
+    var fareList = JSON.parse(localStorage["fare"]);
+
+
+
     window.location.href = "/map.html";
     return true;
 }
@@ -30,14 +30,14 @@ function loadFunctionIndex() {
 
 function loadFunctionMap() {
     console.log(localStorage.getItem("start"));
-    
+
 //    placeholder for start and end points
     document.getElementById("initial-start").innerHTML = "<div class='input-group'><span class='input-group-addon' id='basic-addon1'>start</span><input type='text' id='startparam' class='form-control' placeholder='" +
-        localStorage.getItem("start") + 
+        localStorage.getItem("start") +
         "' aria-describedby='basic-addon1'></div>"
-    
+
     document.getElementById("initial-end").innerHTML = "<div class='input-group'><span class='input-group-addon' id='basic-addon1'>end</span><input type='text' id='startparam' class='form-control' placeholder='" +
-    localStorage.getItem("end") + 
+    localStorage.getItem("end") +
     "' aria-describedby='basic-addon1'></div>"
-    
+
 }
