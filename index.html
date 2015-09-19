@@ -1,6 +1,7 @@
 <html>
 	<head>
         <title>Dishcovery</title>
+                <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="css/style.css" rel="stylesheet">
         <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
@@ -18,12 +19,13 @@
         <div class="col-sm-6">
             <h1>Dishcover.</h1>
             <form name="time">
+                <div class='input-group'><span class='input-group-addon' id='basic-addon1'>Point of Interest @ </span><input type='text' id='poi' class='form-control' placeholder='Enter address of POI' aria-describedby='basic-addon1'></div>
                 <P></P>
-                 <div class='input-group'><span class='input-group-addon' id='basic-addon1'>Point of Interest @ </span><input type='text' id='poi' class='form-control' placeholder='Enter address of POI' aria-describedby='basic-addon1'></div>
 
                 <div class='input-group'>Choose your spiritual guide.</div>
-                <button class='btn' onclick="setGuide('hipster')">Hipster</button>
-                <button class='btn' onclick="setGuide('tourist')">Tourist</button>
+                <button type="button"class='btn' onclick="setGuide('hipster')">Hipster</button>
+                <button type="button" class='btn' onclick="setGuide('tourist')">Tourist</button>
+                <P></P>
 
                 <div class='input-group'>Choose your fare.</div>
                 <button type="button" class='btn' onclick="setFare(0)">Breakfast</button>
@@ -32,14 +34,15 @@
                 <button type="button" class='btn' onclick="setFare(3)">High tea</button>
                 <button type="button" class='btn' onclick="setFare(4)">Dinner</button>
                 <button type="button" class='btn' onclick="setFare(5)">Dessert</button>
+                <P></P>
 
                 <div class='input-group'>Choose your difficulty level.</div>
-                <button class='btn'>Lazy af</button>
-                <button class='btn'>A walk sounds good</button>
-                <button class='btn'>I want to go EVERYWHERE</button>
+                <button type="button" class='btn' onclick="setDifficulty(0)">Lazy af</button>
+                <button type="button" class='btn' onclick="setDifficulty(1)">A walk sounds good</button>
+                <button type="button" class='btn' onclick="setDifficulty(2)">I want to go EVERYWHERE</button>
+                <P></P>
 
-
-               <a type="submit" class="btn btn-default btn-block" onclick="submitPoints()" href="/map.html">Submit</a>
+               <a type="submit" class="btn btn-default btn-block" onclick="submitPoints()" href="map.html">Submit</a>
             </form>
         </div>
         <div class="col-sm-3"></div>

@@ -1,5 +1,14 @@
 h1 {
- color: #991133;
+ padding-top:10%;
+ color: #f75f4f;
+}
+
+body {
+font-family: "Lato";
+}
+
+p {
+    padding-bottom: 20px;
 }
 
 #map {

@@ -86,6 +86,21 @@ function setFare(fareIndex) {
     console.log("update!!!!" + fareList);
 }
 
+function setDifficulty(difficultyLevel) {
+    localStorage.setItem("difficulty", difficultyLevel);
+    console.log(difficultyLevel);
+}
+
+function autoComplete() {
+    var input = /** @type {~HTMLInputElement} */(document.getElementById('startPoint'));
+    var autocomplete = new google.maps.placesAutocomplete(input);
+    autocomplete.addListener('place_changed', function() {
+        infowindow.close();
+        var place = autocomplete.getPlace();
+    }
+    
+}
+
 function loadFunctionIndex() {
     console.log("INITIAL PAGE LOAD");
     var fares = [false, false, false, false, false, false];

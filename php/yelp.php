@@ -120,19 +120,12 @@ function query_api($term, $location) {
     $response = json_decode(search($term, $location));
     $business_id = $response->businesses[0]->id;
 
-    print sprintf(
-        "%d businesses found, querying business info for the top result \"%s\"\n\n",
-        count($response->businesses),
-        $business_id
-    );
-
     $response = get_business($business_id);
 
-    print sprintf("Result for business \"%s\" found:\n", $business_id);
-    print "$response\n";
+    echo $response;
 }
 
-$term = $_POST['term']
+$term = $_POST['term'];
 $location = $_POST['location'];
 
 query_api($term, $location);
