@@ -1,3 +1,24 @@
 h1 {
  color: #991133;
 }
+
+#map {
+    height: 100%;
+}
+
+.map-column {
+	border-left: 1px solid rgba(0,0,0,0.2);
+	padding-left: 0;
+}
+
+.content-title {
+    margin-left: 32px;
+    color: #333;
+    padding-top: 5px;
+    font-weight: 600;
+}
+
+.content-content {
+    color: #666;
+    margin-left: 32px;
+}
