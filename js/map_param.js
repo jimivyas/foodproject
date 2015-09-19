@@ -9,7 +9,6 @@ function submitPoints() {
     return true;
 }
 
-
 function loadFunction() {
     console.log(localStorage.getItem("start"));
     
