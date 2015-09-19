@@ -4,8 +4,9 @@ function submitPoints() {
     var endTime = document.getElementById('endPoint').value;
     localStorage.setItem("start", startPoint);
     localStorage.setItem("end", endPoint);
-    onsole.log(localStorage.getItem("start"));
-    window.location.href = "/foodproject/map.html";
+    console.log(localStorage.getItem("start"));
+    window.location.href = "/map.html";
+    return true;
 }
 
 function loadFunction() {
