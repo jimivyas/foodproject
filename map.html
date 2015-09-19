@@ -4,10 +4,10 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="css/style.css" rel="stylesheet">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-        <script src="js/script.js" type="text/javascript"></script>
+        <script src="js/map_param.js" type="text/javascript"></script>
 	</head>
 
-	<body>
+	<body onload="loadFunction()">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-3 col-md-4">
@@ -15,6 +15,11 @@
                     <h1></h1>
                     </div>
                     
+                    <div id="initial-start">
+                    </div>
+                    
+                    <div id="initial-end">
+                    </div>
                     
                     <!--sidebar-->
                     side bar

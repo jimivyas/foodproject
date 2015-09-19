@@ -6,15 +6,22 @@
         <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        
+        <script src="/js/map_param.js"></script>
+        
 	</head>
 
 	<body>
-        <h1>WELCOME!</h1>
-        <p>field 1</p>
-        <p>field 2</p>
+        <h1>WELCOME! PICK YOUR FOOD ADVENTURE.</h1>
+        <form name="time">
+            <p>Where do you want to start?</p>
+            <input type="text" id="startPoint">
+            <p>Where do you want to end?</p>
+            <input type="text" id="endPoint">
+            <a href="/foodproject/map.html"><button type="submit" class="btn btn-default btn-block" onclick="submitPoints()">Submit</button></a>
+        </form>
 <!--        watch your slashes-->
-        <p><a href="/foodproject/map.html">submit</a></p>
-
-        <script src="js/bootstrap.min.js"></script>
-	</body>
+        <script src="js/bootstrap.min.js">
+        </script>
+    </body>
 </html>
