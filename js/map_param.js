@@ -16,7 +16,7 @@ $(document).ready(function() {
             console.log("DIFFICULTY");
             $("#lev0").attr("class", "btn");
             $("#lev1").attr("class", "btn");
-            $("lev2").attr("class", "btn");
+            $("#lev2").attr("class", "btn");
         } else {
          console.log("fare");
         
