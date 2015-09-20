@@ -1,4 +1,8 @@
-
+$(document).ready(function() {
+    $(".btn").click(function() {
+        $(this).toggleClass("btn-warning");
+    })
+});
 
 function submitPoints() {
     console.log("hi dweebteam");
