@@ -2,12 +2,13 @@ h1 {
  padding-top:10%;
  color: #f75f4f;
  text-align: center;
- font-size: 5em;
+ font-size: 18vw;
 }
 
 h6 {
  text-align: center;
- font-size: 2em;
+ font-size: 5.5vw;
+    padding-bottom: 10vh;
 }
 
 html {
@@ -35,7 +36,7 @@ body {
     background-color: transparent;
 font-family: "Lato";
     color:#fff;
-    font-size:1.5em;
+    font-size:5vw;
 }
 
 #sidebar {
@@ -76,10 +77,13 @@ p {
     padding:6px 6px;
     cursor:pointer;
     border:2px solid #555;
+    background: rgba(0,0,0,.5);
     margin:5px;
+    float: right;
 }
 .containerz {
     margin:5px;
+    padding:16px;
 }
 .containerz > div {
     display:none;
