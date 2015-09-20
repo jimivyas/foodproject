@@ -1,10 +1,29 @@
 h1 {
  padding-top:10%;
  color: #f75f4f;
+ text-align: center;
+ font-size: 10vh;
 }
 
-html { 
-  background: url(fooff.gif) no-repeat center center fixed; 
+h6 {
+ text-align: center;
+ font-size: 6vh;
+    padding-bottom: 6vh;
+}
+
+.btn {
+    background: #999;
+
+}
+
+.btn-default {
+    background: #fefefe;
+
+}
+
+
+html {
+  background: url(fooff.gif) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -28,7 +47,11 @@ body {
     background-color: transparent;
 font-family: "Lato";
     color:#fff;
-    font-size:1.25em
+    font-size:3vh;
+}
+
+#sidebar {
+  font-size:1.14em;
 }
 
 p {
@@ -44,6 +67,7 @@ p {
 	padding-left: 0;
 }
 
+
 .content-title {
     margin-left: 32px;
     color: #333;
@@ -54,4 +78,27 @@ p {
 .content-content {
     color: #666;
     margin-left: 32px;
+}
+
+
+.menu > li {
+    display:inline-block;
+    font-weight:bold;
+    font-size:2em;
+    padding:6px 6px;
+    cursor:pointer;
+    border:2px solid #555;
+    background: rgba(0,0,0,.5);
+    margin:5px;
+    float: right;
+}
+.containerz {
+    margin:5px;
+    padding:16px;
+}
+.containerz > div {
+    display:none;
+}
+.containerz > div:first-child {
+    display:block;
 }

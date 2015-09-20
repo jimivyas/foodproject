@@ -1,4 +1,36 @@
 
+$(document).ready(function() {
+    $(".btn").click(function() {
+
+//        check if already selected
+        console.log("class =" + $(this).attr('class'));
+        if ($(this).attr('class') == "btn-warning"){
+            console.log("ALREADY SELECTED");
+        } else if ($(this).attr('id') == "hipster" || $(this).attr('id') == "tourist") {
+            console.log("HIPSTER OR TOURIST");
+            $("#hipster").attr("class", "btn");
+            $("#tourist").attr("class", "btn");
+
+        } else if ($(this).attr('id') == "lev0" || $(this).attr('id') == "lev1" || $(this).attr('id') == "lev2") {
+            console.log("DIFFICULTY");
+            $("#lev0").attr("class", "btn");
+            $("#lev1").attr("class", "btn");
+            $("#lev2").attr("class", "btn");
+        } else {
+         console.log("fare");
+
+        }
+
+        $(this).toggleClass("btn-warning");
+    })
+    
+    
+    $('.menu>li').on('click',function(e){
+    $('.containerz>.'+ e.target.classList[0]).show().siblings().hide();
+});
+
+});
+
 function submitPoints() {
     console.log("hi dweebteam");
     var poi = document.getElementById('poi').value;
@@ -104,8 +136,23 @@ function loadFunctionIndex() {
 }
 
 function loadFunctionMap() {
+    localStorage["selections"] = "";
     poidisplay = localStorage.getItem("poi");
     document.getElementById("mappoi").innerHTML = poidisplay;
-    
-    
+    mealsorder = {0: "Breakfast", 1: "Coffee", 2: "Lunch", 3: "High Tea", 4: "Dinner", 5: "Dessert"};
+    var fareList = JSON.parse(localStorage["fare"]);
+    for (index = 0; index < fareList.length ; ++index) {
+      if(fareList[index]) {
+        if (fareList[index] !== 0) {
+        localStorage["selections"] = localStorage["selections"] + " | " + mealsorder[index];
+        }
+      };
+    };
+    localStorage
+    console.log(localStorage["selections"]);
+    mealdisplay = localStorage.getItem("selections");
+    document.getElementById("selections").innerHTML = mealdisplay + " | " ;
+    document.getElementById("guide").innerHTML = localStorage["guide"];
 }
+
+
