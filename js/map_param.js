@@ -1,4 +1,3 @@
-$('#foo').attr('class');
 
 $(document).ready(function() {
     $(".btn").click(function() {
@@ -26,6 +25,14 @@ $(document).ready(function() {
         $(this).toggleClass("btn-warning");
     })
 });
+
+
+
+$('.menu>li').on('click',function(e){
+    $('.container>.'+ e.target.classList[0]).show().siblings().hide();
+});
+
+
 
 function submitPoints() {
     console.log("hi dweebteam");
