@@ -12,7 +12,8 @@
         geocoder.geocode({'address': poi}, function(results, status) {
         if (status === google.maps.GeocoderStatus.OK) {
             poi = results[0].geometry.location;
-            destinations.push([poi["H"],poi["L"]]);
+            destinations.push([poi["H"], poi["L"]]);
+            n++;
         } else {
             alert('Geocode was not successful for the following reason: ' + status);
         }
@@ -46,7 +47,7 @@
 
     function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         var waypts = [];
-        for (var i = 0; i < n+1; i++) {
+        for (var i = 0; i < n-1; i++) {
             waypts.push({
                 location: new google.maps.LatLng(destinations[i][0], destinations[i][1]),
                 stopover: true
@@ -54,7 +55,7 @@
         };
         directionsService.route({
             origin: new google.maps.LatLng(destinations[0][0], destinations[0][1]),
-            destination: new google.maps.LatLng(destinations[n][0], destinations[n][1]),
+            destination: new google.maps.LatLng(destinations[n-1][0], destinations[n-1][1]),
             waypoints: waypts,
             optimizeWaypoints: true,
             travelMode: google.maps.TravelMode.WALKING
@@ -77,8 +78,13 @@
             zoom: 16,
             mapTypeId: google.maps.MapTypeId.MAP,
             disableDoubleClickZoom: true
-
         });
+
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(destinations[0][0], destinations[0][1]),
+                map: map,
+                title: 'START!'
+            });
 
         var bounds = new google.maps.LatLngBounds(
             new google.maps.LatLng(destinations[0][0], destinations[0][1]),
@@ -88,7 +94,7 @@
         var srcImage = 'https://developers.google.com/maps/documentation/' +
             'javascript/examples/full/images/talkeetna.png';
 
-        for (var i = 0; i < destinations.length; i++) {
+        for (var i = 1; i < n; i++) {
             var locationcenter = new google.maps.LatLng(destinations[i][0], destinations[i][1]);
             var overlay = new USGSOverlay(bounds, srcImage, map, locationcenter, i);
         }
@@ -105,6 +111,7 @@
         this.image_ = image;
         this.map_ = map;
         this.index_ = index;
+        console.log(this.index_);
 
         this.div_ = null;
 
@@ -143,7 +150,7 @@
         div.style.top = '0';
         div.style.width = '50px';
         div.style.height = '50px';
-        div.style.background = "url("+images[this.index_]+")";
+        div.style.background = "url("+images[this.index_-1]+")";
         div.style.backgroundSize = 'cover';
         div.style.borderRadius = '2000px';
         div.style.boxShadow = '0px 1px 2px rgba(0,0,0,0.5), 0px 0px 1px rgba(0,0,0,0.25)';
@@ -159,12 +166,12 @@
         content.style.boxShadow = '0px 1px 2px rgba(0,0,0,0.5), 0px 0px 1px rgba(0,0,0,0.25)';
         content.style.position = 'absolute';
         content.style.width = '150px';
-        content.style.minHeight = '40px';
+        content.style.height = '40px';
         content.style.left = '25px';
         content.style.top = '6px';
         content.style.background = 'white';
         content.style.display = 'none';
-        content.innerHTML = '<div class="content-title">'+names[this.index_]+'</div><div class="content-content">Good Coffee Shop</div>';
+        content.innerHTML = '<div class="content-title">'+names[this.index_-1]+'</div><div class="content-content">'+pois[this.index_-1]+'</div>';
         parentdiv.appendChild(content);
 
         this.div_ = parentdiv;
