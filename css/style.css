@@ -102,3 +102,8 @@ p {
 .containerz > div:first-child {
     display:block;
 }
+
+li:hover {
+    color: #FF5566;   
+    background: rgba(255,255,255,.5);
+}
