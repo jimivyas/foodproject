@@ -13,6 +13,7 @@ h6 {
 
 .btn {
     color: #111;
+    font-size:3vh;
 
 }
 
@@ -47,11 +48,11 @@ body {
     background-color: transparent;
 font-family: "Lato";
     color:#fff;
-    font-size:3vh;
+    font-size:3.5vh;
 }
 
 #sidebar {
-  font-size:1.14em;
+  font-size:3.5vh;
 }
 
 p {
@@ -104,6 +105,6 @@ p {
 }
 
 li:hover {
-    color: #FF5566;   
+    color: #f75f4f;   
     background: rgba(255,255,255,.5);
 }
