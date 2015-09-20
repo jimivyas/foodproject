@@ -12,13 +12,14 @@ h6 {
 }
 
 .btn {
-    color: #111;
+    color: #fff;
     font-size:3vh;
 
 }
 
 .btn-default {
-    background: #fefefe;
+    background: #f75f4f;
+    float: right;
 
 }
 

@@ -8,20 +8,20 @@ $(document).ready(function() {
             console.log("ALREADY SELECTED");
         } else if ($(this).attr('id') == "hipster" || $(this).attr('id') == "tourist") {
             console.log("HIPSTER OR TOURIST");
-            $("#hipster").attr("class", "btn");
-            $("#tourist").attr("class", "btn");
+            $("#hipster").attr("class", "btn btn-block");
+            $("#tourist").attr("class", "btn btn-block");
 
         } else if ($(this).attr('id') == "lev0" || $(this).attr('id') == "lev1" || $(this).attr('id') == "lev2") {
             console.log("DIFFICULTY");
-            $("#lev0").attr("class", "btn");
-            $("#lev1").attr("class", "btn");
-            $("#lev2").attr("class", "btn");
+            $("#lev0").attr("class", "btn btn-block");
+            $("#lev1").attr("class", "btn btn-block");
+            $("#lev2").attr("class", "btn btn-block");
         } else {
          console.log("fare");
 
         }
 
-        $(this).toggleClass("btn-warning");
+        $(this).toggleClass("btn-warning btn");
     })
     
     

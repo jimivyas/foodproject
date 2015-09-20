@@ -38,7 +38,7 @@
 
             <div class="toggle2">
                 Set the center of your adventure.
-                <br>
+                <p></p>
                 <div class='input-group'>
                     <span class='input-group-addon' id='basic-addon1'>Center of Adventure @ </span><input type='text' id='poi' class='form-control' placeholder='The Westin, MOMA, Pike Place' aria-describedby='basic-addon1'></div>
 
@@ -53,10 +53,17 @@
 
 
             <div class="toggle3">
+                
+                
                 <div class='input-group'>Pick your spiritual food guide.</div>
-                <button type="button" class='btn' onclick="setGuide('hipster')" id="hipster">Hipster</button>
-                <button type="button" class='btn' onclick="setGuide('tourist')" id="tourist">Tourist</button>
                 <P></P>
+                <div class="col-xs-6">
+                <button type="button" class='btn btn-block' onclick="setGuide('hipster')" id="hipster">Hipster</button>
+                </div>
+                <div class="col-xs-6">
+                <button type="button" class='btn btn-block' onclick="setGuide('tourist')" id="tourist">Tourist</button>
+                <P></P>
+                </div>
 
                 <center>
             <ul class="menu">
@@ -69,6 +76,7 @@
             <div class="toggle4">
                 <div class='input-group'>Select the fare to your fancy. As many as you'd like, you glutton.</div><P></P>
 
+                <div class="row">
                 <div class="col-xs-6">
 
                 <button type="button" class='btn btn-block' onclick="setFare(0)">Breakfast</button>
@@ -81,7 +89,11 @@
                 <button type="button" class='btn btn-block' onclick="setFare(4)">Dinner</button>
                 <button type="button" class='btn btn-block' onclick="setFare(5)">Dessert</button>
                 </div>
+                
+                </div>
+                <p></p>
                 <center>
+                    
             <ul class="menu">
             <li class="toggle5">→</li>
                     </ul>
@@ -90,12 +102,12 @@
             </div>
             <div class="toggle5">
                  <div class='input-group'>Choose your adventure difficulty level.</div>
-                <button type="button" class='btn' id="lev0" onclick="setDifficulty(0)">Can we just go next door?</button>
-                <button type="button" class='btn' id="lev1" onclick="setDifficulty(1)">A walk sounds good</button>
-                <button type="button" class='btn' id="lev2" onclick="setDifficulty(2)">Take me <i>everywhere</i></button>
+                <button type="button" class='btn btn-block' id="lev0" onclick="setDifficulty(0)">Can we just go next door?</button>
+                <button type="button" class='btn btn-block' id="lev1" onclick="setDifficulty(1)">A walk sounds good</button>
+                <button type="button" class='btn btn-block' id="lev2" onclick="setDifficulty(2)">Take me <i>everywhere</i></button>
                 <P></P>
 
-               <a type="submit" class="btn btn-default btn-block" onclick="submitPoints()" href="map.html">Off we go!</a>
+               <a type="submit" class="btn btn-default" onclick="submitPoints()" href="map.html">Off we go!</a>
             </div>
         </div>
 
