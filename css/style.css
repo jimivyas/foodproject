@@ -12,7 +12,8 @@ h6 {
 }
 
 .btn {
-    background: #999;
+    color: #111;
+    font-size:3vh;
 
 }
 
@@ -47,11 +48,11 @@ body {
     background-color: transparent;
 font-family: "Lato";
     color:#fff;
-    font-size:3vh;
+    font-size:3.5vh;
 }
 
 #sidebar {
-  font-size:1.14em;
+  font-size:3.5vh;
 }
 
 p {
@@ -101,4 +102,9 @@ p {
 }
 .containerz > div:first-child {
     display:block;
+}
+
+li:hover {
+    color: #f75f4f;   
+    background: rgba(255,255,255,.5);
 }
