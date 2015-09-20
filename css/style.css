@@ -1,6 +1,11 @@
 h1 {
  padding-top:10%;
  color: #f75f4f;
+ text-align: center;
+}
+
+h6 {
+ text-align: center;
 }
 
 html { 
