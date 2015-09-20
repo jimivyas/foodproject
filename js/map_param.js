@@ -1,3 +1,5 @@
+
+
 function submitPoints() {
     console.log("hi dweebteam");
     var poi = document.getElementById('poi').value;
@@ -93,7 +95,7 @@ function setDifficulty(difficultyLevel) {
 
 function autoComplete() {
     var input = document.getElementById('poi');
-    autocomplete = new     google.maps.places.Autocomplete(input);
+    autocomplete = new google.maps.places.Autocomplete(input);
 }
 
 function loadFunctionIndex() {
@@ -104,13 +106,8 @@ function loadFunctionIndex() {
 }
 
 function loadFunctionMap() {
-    autoComplete();
-    console.log(localStorage.getItem("start"));
-
-//    placeholder for start and end points
-    document.getElementById("initial-poi").innerHTML = "<div class='input-group'><span class='input-group-addon' id='basic-addon1'>POI</span><input type='text' id='startparam' class='form-control' placeholder='" +
-        localStorage.getItem("poi") +
-        "' aria-describedby='basic-addon1'></div>"
-
-
+    poidisplay = localStorage.getItem("poi");
+    document.getElementById("mappoi").innerHTML = poidisplay;
+    
+    
 }
