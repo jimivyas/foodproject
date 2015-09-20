@@ -1,6 +1,7 @@
     var destinations = [];
     var images = [];
     var names = [];
+    var urls = [];
     var n = 0;
 
     var fareList = JSON.parse(localStorage["fare"]);
@@ -15,7 +16,7 @@
             destinations.push([poi["H"], poi["L"]]);
             n++;
         } else {
-            alert('Geocode was not successful for the following reason: ' + status);
+            console.log('Geocode was not successful for the following reason: ' + status);
         }
     });
 
@@ -27,11 +28,13 @@
                 url: 'php/yelp.php',
                 data: {term: pois[i], location: localStorage["poi"]},
                 success: function(response) {
+                    console.log(response);
                     var json = JSON.parse(response);
                     if(json['location']){
                         console.log(json);
                         images.push(json['image_url']);
                         names.push(json['name']);
+                        urls.push(json['mobile_url']);
                         destinations.push([json['location']['coordinate']['latitude'],json['location']['coordinate']['longitude']]);
                         n++;
                     }
@@ -88,7 +91,7 @@
 
         var bounds = new google.maps.LatLngBounds(
             new google.maps.LatLng(destinations[0][0], destinations[0][1]),
-            new google.maps.LatLng(destinations[0][0], destinations[1][1]));
+            new google.maps.LatLng(destinations[0][0], destinations[0][1]));
 
         // The photograph is courtesy of the U.S. Geological Survey.
         var srcImage = 'https://developers.google.com/maps/documentation/' +
@@ -171,7 +174,7 @@
         content.style.top = '6px';
         content.style.background = 'white';
         content.style.display = 'none';
-        content.innerHTML = '<div class="content-title">'+names[this.index_-1]+'</div><div class="content-content">'+pois[this.index_-1]+'</div>';
+        content.innerHTML = '<div class="content-title"><a href="'+urls[this.index_-1]+'">'+names[this.index_-1]+'</a></div><div class="content-content">'+pois[this.index_-1]+'</div>';
         parentdiv.appendChild(content);
 
         this.div_ = parentdiv;

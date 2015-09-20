@@ -128,6 +128,6 @@ function query_api($term, $location) {
 $term = $_POST['term'];
 $location = $_POST['location'];
 
-query_api($term, 'london');
+query_api($term, $location);
 
 ?>
