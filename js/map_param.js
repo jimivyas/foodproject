@@ -23,12 +23,12 @@ $(document).ready(function() {
 
         $(this).toggleClass("btn-warning");
     })
+    
+    
+    $('.menu>li').on('click',function(e){
+    $('.containerz>.'+ e.target.classList[0]).show().siblings().hide();
 });
 
-
-
-$('.menu>li').on('click',function(e){
-    $('.container>.'+ e.target.classList[0]).show().siblings().hide();
 });
 
 

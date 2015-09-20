@@ -60,3 +60,23 @@ p {
     color: #666;
     margin-left: 32px;
 }
+
+
+.menu > li {
+    display:inline-block;
+    font-weight:bold;
+    padding:6px 10px;
+    cursor:pointer;
+    border:2px solid tomato;
+    margin:5px;
+}
+.containerz {
+    border:2px solid black;
+    margin:5px;
+}
+.containerz > div {
+    display:none;
+}
+.containerz > div:first-child {
+    display:block;
+}
