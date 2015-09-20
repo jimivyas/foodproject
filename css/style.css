@@ -8,8 +8,8 @@ h6 {
  text-align: center;
 }
 
-html { 
-  background: url(fooff.gif) no-repeat center center fixed; 
+html {
+  background: url(fooff.gif) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -33,7 +33,11 @@ body {
     background-color: transparent;
 font-family: "Lato";
     color:#fff;
-    font-size:1.25em
+    font-size:1.25em;
+}
+
+#sidebar {
+  font-size:1.14em;
 }
 
 p {
@@ -48,6 +52,7 @@ p {
 	border-left: 1px solid rgba(0,0,0,0.2);
 	padding-left: 0;
 }
+
 
 .content-title {
     margin-left: 32px;
