@@ -1,9 +1,7 @@
 
-
 function submitPoints() {
     console.log("hi dweebteam");
     var poi = document.getElementById('poi').value;
-    localStorage.setItem("poi", poi);
 
     var fareList = JSON.parse(localStorage["fare"]);
 
@@ -95,7 +93,7 @@ function setDifficulty(difficultyLevel) {
 
 function autoComplete() {
     var input = document.getElementById('poi');
-    autocomplete = new google.maps.places.Autocomplete(input);
+    var autocomplete = new google.maps.places.Autocomplete(input);
 }
 
 function loadFunctionIndex() {

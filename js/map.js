@@ -1,10 +1,43 @@
-    var destinations = [
-        [51.752740, -1.252076],
-        [51.751988, -1.257578],
-        [51.753554, -1.258624],
-        [51.753899, -1.256478]
-    ];
-    var n = destinations.length - 1;
+    var destinations = [];
+    var images = [];
+    var names = [];
+    var n = 0;
+
+    var fareList = JSON.parse(localStorage["fare"]);
+
+    var pois = ['breakfast','coffee','lunch','high tea','dinner','dessert'];
+
+    var geocoder = new google.maps.Geocoder();
+    var poi = localStorage["poi"];
+        geocoder.geocode({'address': poi}, function(results, status) {
+        if (status === google.maps.GeocoderStatus.OK) {
+            poi = results[0].geometry.location;
+            destinations.push([poi["H"],poi["L"]]);
+        } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+        }
+    });
+
+    for(var i=0;i<6;i++){
+        console.log(fareList[i]);
+        if (fareList[i]) {
+            $.ajax({
+                type: 'post',
+                url: 'php/yelp.php',
+                data: {term: pois[i], location: localStorage["poi"]},
+                success: function(response) {
+                    var json = JSON.parse(response);
+                    if(json['location']){
+                        console.log(json);
+                        images.push(json['image_url']);
+                        names.push(json['name']);
+                        destinations.push([json['location']['coordinate']['latitude'],json['location']['coordinate']['longitude']]);
+                        n++;
+                    }
+                }
+            });
+        };
+    };
 
     USGSOverlay.prototype = new google.maps.OverlayView();
 
@@ -13,7 +46,7 @@
 
     function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         var waypts = [];
-        for (var i = 0; i < n; i++) {
+        for (var i = 0; i < n+1; i++) {
             waypts.push({
                 location: new google.maps.LatLng(destinations[i][0], destinations[i][1]),
                 stopover: true
@@ -110,7 +143,7 @@
         div.style.top = '0';
         div.style.width = '50px';
         div.style.height = '50px';
-        div.style.background = "url('http://www.thesilverink.com/wp-content/uploads/2015/05/coffee.jpg')";
+        div.style.background = "url("+images[this.index_]+")";
         div.style.backgroundSize = 'cover';
         div.style.borderRadius = '2000px';
         div.style.boxShadow = '0px 1px 2px rgba(0,0,0,0.5), 0px 0px 1px rgba(0,0,0,0.25)';
@@ -126,12 +159,12 @@
         content.style.boxShadow = '0px 1px 2px rgba(0,0,0,0.5), 0px 0px 1px rgba(0,0,0,0.25)';
         content.style.position = 'absolute';
         content.style.width = '150px';
-        content.style.height = '40px';
+        content.style.minHeight = '40px';
         content.style.left = '25px';
         content.style.top = '6px';
         content.style.background = 'white';
         content.style.display = 'none';
-        content.innerHTML = '<div class="content-title">Costa Coffee</div><div class="content-content">Good Coffee Shop</div>';
+        content.innerHTML = '<div class="content-title">'+names[this.index_]+'</div><div class="content-content">Good Coffee Shop</div>';
         parentdiv.appendChild(content);
 
         this.div_ = parentdiv;
