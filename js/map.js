@@ -3,6 +3,8 @@
     var names = [];
     var urls = [];
     var n = 0;
+    var radius = 8000*5*(1+parseInt(localStorage["difficulty"]));
+    console.log(radius);
 
     var fareList = JSON.parse(localStorage["fare"]);
 
@@ -26,7 +28,7 @@
             $.ajax({
                 type: 'post',
                 url: 'php/yelp.php',
-                data: {term: pois[i], location: localStorage["poi"]},
+                data: {term: pois[i], location: localStorage["poi"], radius_filter: radius},
                 success: function(response) {
                     console.log(response);
                     var json = JSON.parse(response);

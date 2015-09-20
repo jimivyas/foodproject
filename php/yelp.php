@@ -34,6 +34,7 @@ $API_HOST = 'api.yelp.com';
 $DEFAULT_TERM = 'dinner';
 $DEFAULT_LOCATION = 'San Francisco, CA';
 $SEARCH_LIMIT = 3;
+$DEFAULT_RADIUS = 10;
 $SEARCH_PATH = '/v2/search/';
 $BUSINESS_PATH = '/v2/business/';
 
@@ -85,6 +86,7 @@ function request($host, $path) {
  *
  * @param    $term        The search term passed to the API
  * @param    $location    The search location passed to the API
+ * @param    $radius      The search radius
  * @return   The JSON response from the request
  */
 function search($term, $location) {
@@ -127,6 +129,7 @@ function query_api($term, $location) {
 
 $term = $_POST['term'];
 $location = $_POST['location'];
+$radius = $_POST['radius_filter'];
 
 query_api($term, $location);
 
