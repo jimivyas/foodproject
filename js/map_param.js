@@ -110,8 +110,21 @@ function loadFunctionIndex() {
 }
 
 function loadFunctionMap() {
+    localStorage["selections"] = "";
     poidisplay = localStorage.getItem("poi");
     document.getElementById("mappoi").innerHTML = poidisplay;
-    
-    
+    mealsorder = {0: "Breakfast", 1: "Coffee", 2: "Lunch", 3: "High Tea", 4: "Dinner", 5: "Dessert"};
+    var fareList = JSON.parse(localStorage["fare"]);
+    for (index = 0; index < fareList.length ; ++index) {
+      if(fareList[index]) {
+        if (fareList[index] !== 0) {
+        localStorage["selections"] = localStorage["selections"] + " | " + mealsorder[index];
+        }
+      };
+    };
+    console.log(localStorage["selections"]);
+    mealdisplay = localStorage.getItem("selections");
+    document.getElementById("selections").innerHTML = mealdisplay + " | " ;
 }
+
+
