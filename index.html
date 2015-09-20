@@ -21,17 +21,19 @@
             <h1>Dishcovery</h1>
             <h6>Discover your next food adventure.</h6>
             <form name="time">
-
-                <div class='input-group'><span class='input-group-addon' id='basic-addon1'>Point of Interest @ </span><input type='text' id='poi' class='form-control' placeholder='Enter address of POI' aria-describedby='basic-addon1'></div>
+                Set the center of your adventure.
+                <br>
+                <div class='input-group'>
+                    <span class='input-group-addon' id='basic-addon1'>Center of Adventure @ </span><input type='text' id='poi' class='form-control' placeholder='The Westin, MOMA, Pike Place' aria-describedby='basic-addon1'></div>
 
                 <P></P>
 
-                <div class='input-group'>Choose your spiritual guide.</div>
+                <div class='input-group'>Pick your spiritual food guide.</div>
                 <button type="button" class='btn' onclick="setGuide('hipster')" id="hipster">Hipster</button>
                 <button type="button" class='btn' onclick="setGuide('tourist')" id="tourist">Tourist</button>
                 <P></P>
 
-                <div class='input-group'>Choose your fare.</div>
+                <div class='input-group'>Select the fare to your fancy. As many as you'd like, you glutton.</div>
                 <button type="button" class='btn' onclick="setFare(0)">Breakfast</button>
                 <button type="button" class='btn' onclick="setFare(1)">Coffee</button>
                 <button type="button" class='btn' onclick="setFare(2)">Lunch</button>
@@ -40,7 +42,7 @@
                 <button type="button" class='btn' onclick="setFare(5)">Dessert</button>
                 <P></P>
 
-                <div class='input-group'>Choose your difficulty level.</div>
+                <div class='input-group'>Choose your adventure difficulty level.</div>
                 <button type="button" class='btn' id="lev0" onclick="setDifficulty(0)">Lazy af</button>
                 <button type="button" class='btn' id="lev1" onclick="setDifficulty(1)">A walk sounds good</button>
                 <button type="button" class='btn' id="lev2" onclick="setDifficulty(2)">I want to go EVERYWHERE</button>
