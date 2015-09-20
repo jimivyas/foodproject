@@ -92,22 +92,19 @@ function setDifficulty(difficultyLevel) {
 }
 
 function autoComplete() {
-    var input = /** @type {~HTMLInputElement} */(document.getElementById('startPoint'));
-    var autocomplete = new google.maps.placesAutocomplete(input);
-    autocomplete.addListener('place_changed', function() {
-        infowindow.close();
-        var place = autocomplete.getPlace();
-    })
-
+    var input = document.getElementById('poi');
+    autocomplete = new     google.maps.places.Autocomplete(input);
 }
 
 function loadFunctionIndex() {
+    autoComplete();
     console.log("INITIAL PAGE LOAD");
     var fares = [false, false, false, false, false, false];
     localStorage["fare"] = JSON.stringify(fares);
 }
 
 function loadFunctionMap() {
+    autoComplete();
     console.log(localStorage.getItem("start"));
 
 //    placeholder for start and end points
