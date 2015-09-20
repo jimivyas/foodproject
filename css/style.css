@@ -2,14 +2,25 @@ h1 {
  padding-top:10%;
  color: #f75f4f;
  text-align: center;
- font-size: 18vw;
+ font-size: 10vh;
 }
 
 h6 {
  text-align: center;
- font-size: 5.5vw;
-    padding-bottom: 10vh;
+ font-size: 6vh;
+    padding-bottom: 6vh;
 }
+
+.btn {
+    background: #999;
+
+}
+
+.btn-default {
+    background: #fefefe;
+
+}
+
 
 html {
   background: url(fooff.gif) no-repeat center center fixed;
@@ -36,7 +47,7 @@ body {
     background-color: transparent;
 font-family: "Lato";
     color:#fff;
-    font-size:5vw;
+    font-size:3vh;
 }
 
 #sidebar {
