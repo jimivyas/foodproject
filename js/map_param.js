@@ -1,5 +1,28 @@
+$('#foo').attr('class');
+
 $(document).ready(function() {
     $(".btn").click(function() {
+        
+//        check if already selected
+        console.log("class =" + $(this).attr('class'));
+        if ($(this).attr('class') == "btn-warning"){
+            console.log("ALREADY SELECTED");
+        } else if ($(this).attr('id') == "hipster" || $(this).attr('id') == "tourist") {
+            console.log("HIPSTER OR TOURIST");
+            $("#hipster").attr("class", "btn");
+            $("#tourist").attr("class", "btn");
+            
+        } else if ($(this).attr('id') == "lev0" || $(this).attr('id') == "lev1" || $(this).attr('id') == "lev2") {
+            console.log("DIFFICULTY");
+            $("#lev0").attr("class", "btn");
+            $("#lev1").attr("class", "btn");
+            $("lev2").attr("class", "btn");
+        } else {
+         console.log("fare");
+        
+        }
+        
+        
         $(this).toggleClass("btn-warning");
     })
 });
