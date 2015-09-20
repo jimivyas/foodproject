@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
     $(".btn").click(function() {
-        
+
 //        check if already selected
         console.log("class =" + $(this).attr('class'));
         if ($(this).attr('class') == "btn-warning"){
@@ -10,7 +10,7 @@ $(document).ready(function() {
             console.log("HIPSTER OR TOURIST");
             $("#hipster").attr("class", "btn");
             $("#tourist").attr("class", "btn");
-            
+
         } else if ($(this).attr('id') == "lev0" || $(this).attr('id') == "lev1" || $(this).attr('id') == "lev2") {
             console.log("DIFFICULTY");
             $("#lev0").attr("class", "btn");
@@ -18,10 +18,9 @@ $(document).ready(function() {
             $("#lev2").attr("class", "btn");
         } else {
          console.log("fare");
-        
+
         }
-        
-        
+
         $(this).toggleClass("btn-warning");
     })
 });
@@ -152,9 +151,11 @@ function loadFunctionMap() {
         }
       };
     };
+    localStorage
     console.log(localStorage["selections"]);
     mealdisplay = localStorage.getItem("selections");
     document.getElementById("selections").innerHTML = mealdisplay + " | " ;
+    document.getElementById("guide").innerHTML = localStorage["guide"];
 }
 
 
