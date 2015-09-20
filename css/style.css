@@ -70,13 +70,13 @@ p {
 .menu > li {
     display:inline-block;
     font-weight:bold;
-    padding:6px 10px;
+    font-size:2em;
+    padding:6px 6px;
     cursor:pointer;
     border:2px solid tomato;
     margin:5px;
 }
 .containerz {
-    border:2px solid black;
     margin:5px;
 }
 .containerz > div {
@@ -85,3 +85,14 @@ p {
 .containerz > div:first-child {
     display:block;
 }
+
+li:link {
+    color: #FF0000;
+}
+
+
+/* mouse over link */
+li:hover {
+    color: #FF00FF;
+}
+

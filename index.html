@@ -9,6 +9,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu5kUMitJagaDp9qHLpPCUqrC5gBNLFJA&libraries=places"></script>
         <script src="js/map_param.js" type="text/javascript">
+            
 
         </script>
 	</head>
@@ -21,36 +22,43 @@
             <h1>Dishcovery</h1>
             <h6>Discover your next food adventure.</h6>
             
+            <center>
             <ul class="menu">
-            <li class="toggle1">One</li>
-            <li class="toggle2">Two</li>
-            <li class="toggle3">Three</li>
-            <li class="toggle4">Four</li>
-            <li class="toggle5">Five</li>
-        </ul>
+            <li class="toggle1"><span class="glyphicon glyphicon glyphicon-circle-arrow-right"></span></li>
+            <li class="toggle2"><span class="glyphicon glyphicon glyphicon-circle-arrow-right"></span></li>
+            <li class="toggle3"><span class="glyphicon glyphicon glyphicon-circle-arrow-right"></span></li>
+            <li class="toggle4"><span class="glyphicon glyphicon glyphicon-circle-arrow-right"></span></li>
+            <li class="toggle5"><span class="glyphicon glyphicon glyphicon-circle-arrow-right"></span></li>
+        </ul></center>
         <div class="containerz">
-            <div class="toggle1">Here are the contents of 1.</div>
-            <div class="toggle2">Here are the contents of 2..</div>
-            <div class="toggle3">Here are the contents of 3...</div>
-            <div class="toggle4">Here are the contents of 4....</div>
-            <div class="toggle5">Here are the contents of 5.....</div>
-        </div>
-
             
-            <P></P>
-            <form name="time">
+            <div class="toggle1">
+            emily copywrite this thang
+            </div>
+            
+            
+            <div class="toggle2">
                 Set the center of your adventure.
                 <br>
                 <div class='input-group'>
                     <span class='input-group-addon' id='basic-addon1'>Center of Adventure @ </span><input type='text' id='poi' class='form-control' placeholder='The Westin, MOMA, Pike Place' aria-describedby='basic-addon1'></div>
 
                 <P></P>
-
+            </div>
+            
+            
+            
+            
+            <div class="toggle3">
                 <div class='input-group'>Pick your spiritual food guide.</div>
                 <button type="button" class='btn' onclick="setGuide('hipster')" id="hipster">Hipster</button>
                 <button type="button" class='btn' onclick="setGuide('tourist')" id="tourist">Tourist</button>
                 <P></P>
-
+            </div>
+            
+            
+            
+            <div class="toggle4">
                 <div class='input-group'>Select the fare to your fancy. As many as you'd like, you glutton.</div>
                 <button type="button" class='btn' onclick="setFare(0)">Breakfast</button>
                 <button type="button" class='btn' onclick="setFare(1)">Coffee</button>
@@ -59,15 +67,32 @@
                 <button type="button" class='btn' onclick="setFare(4)">Dinner</button>
                 <button type="button" class='btn' onclick="setFare(5)">Dessert</button>
                 <P></P>
-
-                <div class='input-group'>Choose your adventure difficulty level.</div>
+            </div>
+            
+            
+            
+            
+            <div class="toggle5">
+                 <div class='input-group'>Choose your adventure difficulty level.</div>
                 <button type="button" class='btn' id="lev0" onclick="setDifficulty(0)">Lazy af</button>
                 <button type="button" class='btn' id="lev1" onclick="setDifficulty(1)">A walk sounds good</button>
                 <button type="button" class='btn' id="lev2" onclick="setDifficulty(2)">I want to go EVERYWHERE</button>
                 <P></P>
 
                <a type="submit" class="btn btn-default btn-block" onclick="submitPoints()" href="map.html">Submit</a>
-            </form>
+            </div>
+        </div>
+
+            
+            <P></P>
+                
+
+                
+
+                
+
+              
+
         </div>
         <div class="col-sm-3"></div>
         </div>
