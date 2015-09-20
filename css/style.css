@@ -87,14 +87,3 @@ p {
 .containerz > div:first-child {
     display:block;
 }
-
-li:link {
-    color: #FF0000;
-}
-
-
-/* mouse over link */
-li:hover {
-    color: #FF00FF;
-}
-
