@@ -8,11 +8,11 @@ Taking a "make your own adventure" vibe, the web app asks for users to input inf
 
 Some of the fields, such as the tour guide and difficulty level, are left to be slightly facetious and ambiguous to add a level of anticipation and mystery to their food adventure.
 
-## How We built it
+## How we built it
 
 The backend of the web app is in PHP and Javascript, which first processes the Yelp API call to retrieve venues and then displayed on Google Maps via their API. The front-end of the site is built with Bootstrap.js and designed responsively for mobile and web.
 p
-## Challenges We ran into
+## Challenges we ran into
 
 _ Front-end_
 One of the main issues that we encountered was compatibility between devices and browser, where buttons would show up for Android and Windows, while unable to be viewed on iOS. Learning the HTML5 documentation, especially with localStorage, was new to us, and took longer than we expected.1
@@ -20,7 +20,7 @@ One of the main issues that we encountered was compatibility between devices and
 ## Accomplishments that we proud of
 We focused on user-centered design, being conscious of flow in input fields, toggling of buttons, language and tone, and responsive design. We also believe that the overall idea is scalable, usable, and an application that we would definitely use ourselves. We also like the tone that the app conveyed, with its playfulness and fun interactions.
 
-## What We learned
+## What we learned
 - HTML5
 - front-end development
 - Yelp/Google Map APIs
