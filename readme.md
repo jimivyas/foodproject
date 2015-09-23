@@ -17,7 +17,7 @@ p
 _ Front-end_
 One of the main issues that we encountered was compatibility between devices and browser, where buttons would show up for Android and Windows, while unable to be viewed on iOS. Learning the HTML5 documentation, especially with localStorage, was new to us, and took longer than we expected.1
 
-## Accomplishments that we proud of
+## Accomplishments that we're proud of
 We focused on user-centered design, being conscious of flow in input fields, toggling of buttons, language and tone, and responsive design. We also believe that the overall idea is scalable, usable, and an application that we would definitely use ourselves. We also like the tone that the app conveyed, with its playfulness and fun interactions.
 
 ## What we learned
