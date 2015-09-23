@@ -7,13 +7,13 @@
  * by using the Search API to query for businesses by a search term and location,
  * and the Business API to query additional information about the top result
  * from the search query.
- * 
+ *
  * Please refer to http://www.yelp.com/developers/documentation for the API documentation.
- * 
+ *
  * This program requires a PHP OAuth2 library, which is included in this branch and can be
  * found here:
  *      http://oauth.googlecode.com/svn/code/php/
- * 
+ *
  * Sample usage of the program:
  * `php sample.php --term="bars" --location="San Francisco, CA"`
  */
@@ -21,7 +21,7 @@
 // Enter the path that the oauth library is in relation to the php file
 require_once('oauth.php');
 
-// Set your OAuth credentials here  
+// Set your OAuth credentials here
 // These credentials can be obtained from the 'Manage API Access' page in the
 // developers documentation (http://www.yelp.com/developers)
 $CONSUMER_KEY = 'XI67kdnHbzVrvcY6jAfQKQ';

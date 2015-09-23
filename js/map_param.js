@@ -18,7 +18,6 @@ $(document).ready(function() {
             $("#lev2").attr("class", "btn btn-block");
         } else {
          console.log("fare");
-
         }
 
         $(this).toggleClass("btn-warning btn");
@@ -73,6 +72,7 @@ function loadFunctionIndex() {
 }
 
 function loadFunctionMap() {
+    //  liberal usage of localstorage to solve our problems
     localStorage["selections"] = "";
     poidisplay = localStorage.getItem("poi");
     document.getElementById("mappoi").innerHTML = poidisplay;
