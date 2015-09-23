@@ -23,8 +23,8 @@ $(document).ready(function() {
 
         $(this).toggleClass("btn-warning btn");
     })
-    
-    
+
+
     $('.menu>li').on('click',function(e){
     $('.containerz>.'+ e.target.classList[0]).show().siblings().hide();
 });
